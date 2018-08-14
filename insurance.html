@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>insure</title>
+<link rel="stylesheet" type="text/css" href="insurance.css" >
+<script type="text/javascript" src="./insurance.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">共享单车用户保证保险</a>
+        			<p class="navbar-text">上海鸿华度假酒店</p>
+				</div>
+            </div>
+           
+            <table width="100%" border="1" bordercolor="#FFF68F">
+                <tr bgcolor="#FFF68F">
+                    <td><strong>您的剩余保险期间：1天3时57分</strong></td>
+                </tr>
+            </table>
+        </nav>
+	<div id = "time_choose">
+		<br>
+		<br>
+		<p>请选择您要投保的天数：</p>
+		<br>
+		<select name = "insure_days">
+			<option value="7" id="7">七天</option>
+			<option value="30" id="30">一个月</option>
+			<option value="90" id="90">三个月</option>
+			<option value="180" id="180">半年</option>
+		</select>
+		<script>getPrice();</script>
+	</div>
+	<div id = "result">
+		<br>
+		<br>
+		<p>您的信用积分是<script>document.write(getCreditScore());</script>分</p>
+		<p></p>
+		<br>
+		<br>
+		<p>根据您的信用积分,您需要支付</p>
+		<p id="xhl" placeholder="1.24"></p>
+		<br>
+		<br>
+		<button id="confirm" onClick="jumpto()">确认</button>
+	</div>
+	
+	<script> 
+		$(document).ready(function(){
+			$("#insure_days").change(function(){
+				var selected=$(this).children('option:selected').val()
+				// alert(selected);
+				if(selected=="7"){
+					//document.getElementById("search_content_id").
+					$("#xhl").placeholder="1.24";
+				}else if(selected=="30"){
+					$("#xhl").placeholder="3.00";
+				}
+			});
+		}); 
+		function jumpto(){
+			window.location.href='ofo2.html';
+		}
+		function refresh(){
+			
+		}
+	</script>
+</body>
+</html>
