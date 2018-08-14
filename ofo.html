@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>基于区块链的共享单车保证保险</title>
+        
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+        <!--import map-->
+        <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+		<script src="https://cache.amap.com/lbs/static/es5.min.js"></script>
+		<script src="https://webapi.amap.com/maps?v=1.4.8&key=b38f7391301b4f411589921db716b35a"></script>
+		<script src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<!-- import jquery-->
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<!-- import bootstrap-->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+        <style>
+            #container {
+				top: 50px; 
+				width: 100%;
+				height: calc(100% - 50px);
+				position: absolute;
+          	}
+        </style>
+    </head>
+
+    <body>
+        <div id="container"></div>
+
+        <script>
+            var map = new AMap.Map('container', {
+    			resizeEnable: true,
+    			zoom:200,
+    			center: [121.37662200,31.672773000]
+			});
+            map.setFitView(container);
+        </script> 
+    </body>
+</html>
