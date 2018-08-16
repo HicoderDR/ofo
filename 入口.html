@@ -2,13 +2,20 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>insure</title>
-<link rel="stylesheet" type="text/css" href="style/insurance.css" >
-<script type="text/javascript" src="js/insurance.js"></script>
+<title>profile</title>
+<link href="style/profile.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script>      var h=0,m=0,s=0;      </script>
-		<link rel="stylesheet" type="text/css" href="timer.css" >
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="timer.css" >
+<script>      var h=0,m=0,s=20;      </script>
+<style>
+ 	#navigation {
+        height: 50px;
+    }
+	#timer{
+        background-color:khaki;
+    }
+</style>
 </head>
 
 <body>
@@ -31,21 +38,19 @@
 					</div>
 				</div>
 			</nav>
-	<div id = "time_choose">
+	<div id="up">
+	<h2><strong>用户信息</strong></h2>
+	<p>账号:</p>
+	<p>保险剩余时间:</p>
 		<br>
 		<br>
-		<p>请输入您要投保的时长：<input id = "hour" type="number" min="1" max="65535">小时</p>
 		<br>
-		<button id = "figure" type="button" onClick="figurePrice()">计算保费</button>
+	<img id="finger_print" class="Button" onclick="jump_to()" src = "res/fingerprint.png"/>
 	</div>
-	<br>
-	<div id = "result">
-		<br>
-		<p>根据您的信用积分：<script>document.write(getCreditScore());</script>分<p>
-		</p>您需要支付<label id="price">10</label>元</p>
-		<br>
-		<br>
-		<button id="confirm" onClick="jumpto()">去支付</button>
-	</div>
+	<script>
+		function jump_to(){
+			window.location.href="home.html";
+		}
+	</script>
 </body>
 </html>

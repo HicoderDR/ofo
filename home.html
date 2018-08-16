@@ -19,7 +19,7 @@
         <!-- import timer-->
         <link rel="stylesheet" type="text/css" href="timer.css" >
         
-        <script>      var h=0,m=0,s=10;      </script>
+        <script>      var h="xx",m="xx",s="xx";      </script>
         <style>
              #navigation {
                 height: 50px;
@@ -33,6 +33,7 @@
             #button{
                 width: 90px;
                 height: 90px;
+                border: 0px;
                 border-radius: 55px;
                 right: 24px;
                 bottom: 24px;
@@ -80,10 +81,11 @@
             #button-on{
                 width: 90px;
                 height: 90px;
+                border: 0px;
                 border-radius: 55px;
                 right: calc(50%);
                 bottom: 24px;
-                background-color: rgb(0, 238, 255);
+                background-color: rgb(0, 204, 255);
                 position: absolute;
                 text-align: center;
                 display: inline-flex;
@@ -97,10 +99,11 @@
             #button-end{
                 width: 90px;
                 height: 90px;
+                border: 0px;
                 border-radius: 55px;
                 right: calc(50%);
                 bottom: 24px;
-                background-color: rgb(0, 238, 255);
+                background-color:  rgb(0, 204, 255);
                 position: absolute;
                 text-align: center;
                 display: none;
@@ -126,11 +129,11 @@
             <div class="wrap">
                 <div id="timer">
                     <span>您剩余的保险期间倒计时 </span>
-                    <span id="hours"><script>if(h < 10) document.write("0"+h); else document.write(h);</script></span>
+                    <span id="hours"><script>if(h < 10) document.write(h); else document.write(h);</script></span>
                     <span>:</span>
-                    <span id="minute"><script>if(m < 10) document.write("0"+m); else document.write(m);</script></span>
-                    <span>:</span>
-                    <span id="second"><script>if(s < 10) document.write("0"+s); else document.write(s);</script></span>
+                    <span id="minute"><script>if(m < 10) document.write(m); else document.write(m);</script></span>
+                    <span>:</span>  
+                    <span id="second"><script>if(s < 10) document.write(s); else document.write(s);</script></span>
                 </div>
             </div>
         </nav>
@@ -180,11 +183,10 @@
         </div>
 
         <script>
+            h=0;m=0;s=10;
+           if(window.location.href.split("=")[1]) h=window.location.href.split("=")[1];
             var lnglatXY;
-            //初始化地图
-            
-            
-
+            //初始化地
             var map = new AMap.Map('container', {
     			resizeEnable: true,
     			zoom:16,
@@ -302,7 +304,7 @@
                 }
             }
             function y(){
-                
+                window.location.href="end.html";
             }
             function n(){
                 setTimeout(function(){

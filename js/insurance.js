@@ -13,5 +13,7 @@ function figurePrice(){
 	document.getElementById("price").innerHTML=price;
 }
 function jumpto(){
-			window.location.href='ofo2.html';
-		}
+			var index=document.getElementById("hour").value;
+			var url = "home.html?index="+index;
+			window.location.href=url;
+}
