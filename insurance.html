@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>insure</title>
-<link rel="stylesheet" type="text/css" href="insurance.css" >
-<script type="text/javascript" src="./insurance.js"></script>
+<link rel="stylesheet" type="text/css" href="style/insurance.css" >
+<script type="text/javascript" src="js/insurance.js"></script>
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -27,48 +27,23 @@
 	<div id = "time_choose">
 		<br>
 		<br>
-		<p>请选择您要投保的天数：</p>
-		<br>
-		<select name = "insure_days">
-			<option value="7" id="7">七天</option>
-			<option value="30" id="30">一个月</option>
-			<option value="90" id="90">三个月</option>
-			<option value="180" id="180">半年</option>
-		</select>
-		<script>getPrice();</script>
+		<p>请输入您要投保的时长：<input id = "hour" type="number" min="1" max="65535">小时</p><button id = "figure" type="button" onClick="figurePrice()">计算保费</button>
 	</div>
+	<br>
+	
+	<br>
 	<div id = "result">
 		<br>
 		<br>
-		<p>您的信用积分是<script>document.write(getCreditScore());</script>分</p>
+		<p>根据您的信用积分：<script>document.write(getCreditScore());</script>分<p>
+		</p>您需要支付<label id="price">10</label>元</p>
 		<p></p>
 		<br>
 		<br>
-		<p>根据您的信用积分,您需要支付<strong>1.24</strong>元</p>
+
 		<br>
-		<br>
-		<button id="confirm" onClick="jumpto()">确认</button>
+		<button id="confirm" onClick="jumpto()">去支付</button>
 	</div>
 	
-	<script> 
-		$(document).ready(function(){
-			$("#insure_days").change(function(){
-				var selected=$(this).children('option:selected').val()
-				// alert(selected);
-				if(selected=="7"){
-					//document.getElementById("search_content_id").
-					$("#xhl").placeholder="1.24";
-				}else if(selected=="30"){
-					$("#xhl").placeholder="3.00";
-				}
-			});
-		}); 
-		function jumpto(){
-			window.location.href='ofo2.html';
-		}
-		function refresh(){
-			
-		}
-	</script>
 </body>
 </html>

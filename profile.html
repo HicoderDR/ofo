@@ -3,9 +3,36 @@
 <head>
 <meta charset="utf-8">
 <title>profile</title>
-<link href="profile.css" rel="stylesheet" type="text/css">
+<link href="style/profile.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+	<nav id="navigation" class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">共享单车用户保证保险</a>
+        			<p class="navbar-text">上海鸿华度假酒店</p>
+				</div>
+            </div>
+           
+            <table width="100%" border="1" bordercolor="#FFF68F">
+                <tr bgcolor="#FFF68F">
+                    <td><strong>您的剩余保险期间：0天0时0分</strong></td>
+                </tr>
+            </table>
+        </nav>
+	<div id="up">
+	<p><strong>用户信息</strong></p>
+	<p>账号:</p>
+	<p>保险剩余时间:</p>
+	<img id="finger_print" class="Button" onclick="jump_to()" src = "res/fingerprint.png"/>
+	</div>
+	<script>
+		function jump_to(){
+			window.location.href="home.html";
+		}
+	</script>
 </body>
 </html>
