@@ -27,23 +27,18 @@
 	<div id = "time_choose">
 		<br>
 		<br>
-		<p>请输入您要投保的时长：<input id = "hour" type="number" min="1" max="65535">小时</p><button id = "figure" type="button" onClick="figurePrice()">计算保费</button>
+		<p>请输入您要投保的时长：<input id = "hour" type="number" min="1" max="65535">小时</p>
+		<br>
+		<button id = "figure" type="button" onClick="figurePrice()">计算保费</button>
 	</div>
-	<br>
-	
 	<br>
 	<div id = "result">
 		<br>
-		<br>
 		<p>根据您的信用积分：<script>document.write(getCreditScore());</script>分<p>
 		</p>您需要支付<label id="price">10</label>元</p>
-		<p></p>
 		<br>
-		<br>
-
 		<br>
 		<button id="confirm" onClick="jumpto()">去支付</button>
 	</div>
-	
 </body>
 </html>

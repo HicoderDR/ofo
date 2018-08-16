@@ -9,7 +9,7 @@ body{
 	
 }
 #up{
-	margin-left: 100px;
+	margin-left: calc(40%);
 	margin-top: 60px;
 	font-size: 20px;
 	font-family: "幼圆"；
