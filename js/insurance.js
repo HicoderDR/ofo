@@ -3,7 +3,7 @@
 
 function getCreditScore()
 {
-	var score=280;
+	var score=95;
 	return score;
 }
 
